@@ -1,0 +1,1082 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abril Sanchez Segundo | Portafolio</title>
+
+<style>
+:root {
+  --azul: #17365d;
+  --azul2: #356b9b;
+  --fondo: #f4f7fb;
+  --texto: #28374a;
+  --gris: #68778a;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* MENÚ PRINCIPAL */
+header {
+  background: var(--azul);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 18px #142c4b25;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+.menu {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: .3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+  background: #ffffff25;
+}
+
+.menu a.proximamente {
+  color: #c8d5e5;
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 1px solid #ffffff70;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* PORTADA */
+.hero {
+  background:
+    radial-gradient(circle at 85% 15%, #3c709f 0, transparent 30%),
+    linear-gradient(120deg, #142b49, #356b9b);
+  color: white;
+}
+
+.hero-contenido {
+  max-width: 1150px;
+  margin: auto;
+  padding: 70px 25px;
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  align-items: center;
+  gap: 45px;
+}
+
+.etiqueta {
+  color: #bcd8f0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 5vw, 57px);
+  line-height: 1.15;
+  margin: 15px 0;
+}
+
+.hero h1 span {
+  color: #b9d9f2;
+}
+
+.hero p {
+  color: #e1ebf5;
+  max-width: 650px;
+}
+
+.foto-contenedor {
+  text-align: center;
+}
+
+.foto {
+  width: 245px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 22px;
+  border: 5px solid white;
+  box-shadow: 0 15px 40px #0003;
+}
+
+.foto-texto {
+  display: table;
+  margin: -20px auto 0;
+  position: relative;
+  background: white;
+  color: var(--azul);
+  padding: 8px 14px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.boton {
+  display: inline-block;
+  padding: 11px 17px;
+  margin: 8px 5px 0 0;
+  border-radius: 9px;
+  background: white;
+  color: var(--azul);
+  border: 1px solid white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: .3s;
+}
+
+.boton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px #0002;
+}
+
+.boton-azul {
+  background: var(--azul);
+  color: white;
+  border-color: var(--azul);
+}
+
+/* CONTENIDO */
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 15px 24px 55px;
+}
+
+.seccion {
+  padding: 43px 0;
+  scroll-margin-top: 90px;
+}
+
+.subtitulo {
+  color: var(--azul2);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--azul);
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 7px 0;
+}
+
+.descripcion {
+  color: var(--gris);
+  margin: 8px 0 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tarjeta {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #dce5ee;
+  box-shadow: 0 7px 25px #142c4b09;
+  transition: .3s;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 12px 30px #142c4b15;
+  transform: translateY(-2px);
+}
+
+.tarjeta h3 {
+  color: var(--azul);
+  margin-top: 0;
+}
+
+.tarjeta p {
+  color: #536276;
+  font-size: 14px;
+}
+
+.dato {
+  padding: 12px 0;
+  border-bottom: 1px solid #e1e8ef;
+  overflow-wrap: anywhere;
+}
+
+.dato:last-child {
+  border-bottom: 0;
+}
+
+.dato small {
+  display: block;
+  color: var(--gris);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+.dato a {
+  color: var(--azul2);
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: #edf4fa;
+  color: #294f76;
+  border: 1px solid #d6e5f2;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* APRENDIZAJES */
+.habilidades {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.habilidad {
+  background: white;
+  padding: 22px;
+  border: 1px solid #dce5ee;
+  border-radius: 15px;
+  transition: .3s;
+}
+
+.habilidad:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #142c4b12;
+}
+
+.icono {
+  font-size: 29px;
+}
+
+.habilidad h3 {
+  color: var(--azul);
+  margin: 8px 0;
+}
+
+.habilidad p {
+  color: var(--gris);
+  font-size: 13px;
+}
+
+/* FILTROS DE PROYECTOS */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filtro {
+  padding: 9px 14px;
+  border: 1px solid #dce5ee;
+  background: white;
+  border-radius: 30px;
+  cursor: pointer;
+  color: var(--texto);
+}
+
+.filtro.activo,
+.filtro:hover {
+  background: var(--azul);
+  color: white;
+}
+
+.proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.proyecto {
+  background: white;
+  border: 1px solid #dce5ee;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #142c4b15;
+}
+
+.proyecto[hidden] {
+  display: none;
+}
+
+.proyecto-imagen {
+  height: 130px;
+  display: grid;
+  place-items: center;
+  font-size: 43px;
+  background: linear-gradient(135deg, #dceaf7, #abc9e4);
+}
+
+.proyecto:nth-child(2) .proyecto-imagen {
+  background: linear-gradient(135deg, #d8ece6, #a5d2c4);
+}
+
+.proyecto:nth-child(3) .proyecto-imagen {
+  background: linear-gradient(135deg, #eee2f8, #ccb8e6);
+}
+
+.proyecto:nth-child(4) .proyecto-imagen {
+  background: linear-gradient(135deg, #f5e9d8, #e7c69b);
+}
+
+.proyecto-contenido {
+  padding: 18px;
+}
+
+.categoria {
+  color: var(--azul2);
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.proyecto h3 {
+  color: var(--azul);
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.proyecto p {
+  color: var(--gris);
+  font-size: 13px;
+}
+
+.ver-mas {
+  color: var(--azul2);
+  background: none;
+  border: 0;
+  padding: 5px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.detalles {
+  display: none;
+  border-top: 1px solid #e1e8ef;
+  padding-top: 12px;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--gris);
+}
+
+.proyecto.abierto .detalles {
+  display: block;
+}
+
+/* CONTACTO */
+.contacto {
+  background: linear-gradient(120deg, #17365d, #356b9b);
+  color: white;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.contacto h2 {
+  color: white;
+}
+
+.contacto p {
+  color: #e1ebf5;
+}
+
+footer {
+  text-align: center;
+  color: var(--gris);
+  padding: 25px;
+  font-size: 12px;
+  border-top: 1px solid #dce5ee;
+}
+
+#arriba {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--azul);
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+}
+
+#arriba.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.revelar {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: .6s;
+}
+
+.revelar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 850px) {
+  .menu a {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .proyectos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: var(--azul);
+    padding: 12px;
+    flex-direction: column;
+  }
+
+  .menu.abierto {
+    display: flex;
+  }
+
+  .menu a {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .hero-contenido {
+    grid-template-columns: 1fr;
+    padding: 45px 22px;
+  }
+
+  .foto {
+    width: 210px;
+    height: 250px;
+  }
+
+  main {
+    padding: 10px 17px 40px;
+  }
+
+  .seccion {
+    padding: 35px 0;
+  }
+
+  .grid,
+  .habilidades,
+  .proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  h2 {
+    font-size: 27px;
+  }
+}
+
+@media print {
+  header, .filtros, .ver-mas, #arriba {
+    display: none !important;
+  }
+
+  .hero {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .seccion {
+    padding: 20px 0;
+  }
+
+  .tarjeta, .proyecto, .habilidad {
+    break-inside: avoid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+
+  .revelar {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">AS | Mi portafolio</div>
+
+    <button class="menu-btn" id="menuBtn"
+      aria-expanded="false" aria-controls="menu">☰ Menú</button>
+
+    <div class="menu" id="menu">
+      <a href="sobre-mi.html" class="activo">Sobre mí</a>
+      <a href="personal-social.html">Personal y social</a>
+      <a href="aprendizajes-proyectos.html">Aprendizajes y proyectos</a>
+      <a href="profesional-vocacional.html">Profesional y vocacional</a>
+    </div>
+  </nav>
+</header>
+
+<!-- PORTADA DEL CURRÍCULUM -->
+<section class="hero" id="inicio">
+  <div class="hero-contenido">
+    <div>
+      <div class="etiqueta">Currículum vitae · Portafolio personal</div>
+
+      <h1>Hola, soy <span>Abril Sanchez Segundo</span></h1>
+
+      <p>
+        Estudiante de Ingeniería en Informática, interesada en el desarrollo
+        de software, las tecnologías web y los sistemas electrónicos.
+        Este espacio presenta quién soy, cómo aprendo, qué sé hacer
+        y los proyectos que desarrollo durante mi formación.
+      </p>
+
+      <a href="#proyectos" class="boton">Conocer mis proyectos ↓</a>
+      <button class="boton" onclick="window.print()">Guardar CV en PDF</button>
+    </div>
+
+    <div class="foto-contenedor">
+      <img src="abril.jpg" alt="Fotografía de Abril Sanchez Segundo"
+        class="foto">
+      <div class="foto-texto">Ingeniería en Informática</div>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<!-- PERFIL -->
+<section class="seccion revelar" id="perfil">
+  <div class="subtitulo">01 · Mi perfil</div>
+  <h2>¿Quién soy?</h2>
+  <p class="descripcion">
+    Una presentación de mi formación, mis intereses y las habilidades
+    que estoy desarrollando.
+  </p>
+
+  <div class="grid">
+    <article class="tarjeta">
+      <h3>Sobre mí</h3>
+      <p>
+        Soy estudiante de Ingeniería en Informática. Me interesa la tecnología
+        y la creación de soluciones que sean útiles, organizadas y accesibles.
+        Disfruto aprender herramientas nuevas, resolver problemas y participar
+        en proyectos donde puedo aplicar mis conocimientos.
+      </p>
+
+      <h3>Mis valores</h3>
+      <div class="etiquetas">
+        <span class="chip">Responsabilidad</span>
+        <span class="chip">Organización</span>
+        <span class="chip">Trabajo en equipo</span>
+        <span class="chip">Compromiso</span>
+        <span class="chip">Aprendizaje continuo</span>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <h3>Datos de contacto</h3>
+
+      <div class="dato">
+        <small>Correo electrónico</small>
+        <a href="mailto:abrilsnchz67@gmail.com">
+          abrilsnchz67@gmail.com
+        </a>
+      </div>
+
+      <div class="dato">
+        <small>Teléfono</small>
+        <strong>729 286 3638</strong>
+      </div>
+
+      <div class="dato">
+        <small>Institución</small>
+        <strong>
+          Tecnológico de Estudios Superiores de San Felipe del Progreso
+        </strong>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CÓMO APRENDO -->
+<section class="seccion revelar" id="aprendizaje">
+  <div class="subtitulo">02 · Mi forma de aprender</div>
+  <h2>Cómo aprendo y qué sé hacer</h2>
+  <p class="descripcion">
+    Mis estrategias de aprendizaje y las herramientas que he comenzado
+    a utilizar en Ingeniería Informática.
+  </p>
+
+  <div class="habilidades">
+    <article class="habilidad">
+      <div class="icono">🧩</div>
+      <h3>Cómo aprendo</h3>
+      <p>
+        Aprendo mejor combinando la explicación con la práctica. Observo
+        ejemplos, sigo pasos, experimento con el código, identifico errores
+        y pruebo soluciones. También me ayuda dividir las tareas grandes
+        en objetivos pequeños.
+      </p>
+    </article>
+
+    <article class="habilidad">
+      <div class="icono">💻</div>
+      <h3>Qué sé hacer</h3>
+      <p>
+        Crear páginas web básicas con HTML y CSS, desarrollar ejercicios
+        de programación con Python y Java, realizar prácticas con Arduino
+        y ESP32, organizar información y colaborar en proyectos tecnológicos.
+      </p>
+    </article>
+
+    <article class="habilidad">
+      <div class="icono">🌱</div>
+      <h3>Qué quiero mejorar</h3>
+      <p>
+        Seguir practicando desarrollo web, programación, bases de datos,
+        integración de hardware y software, documentación y comunicación técnica.
+      </p>
+    </article>
+  </div>
+
+  <div class="grid" style="margin-top:22px">
+    <article class="tarjeta">
+      <h3>Conocimientos técnicos</h3>
+      <div class="etiquetas">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">Python</span>
+        <span class="chip">Java</span>
+        <span class="chip">Arduino</span>
+        <span class="chip">ESP32</span>
+        <span class="chip">Bases de datos</span>
+        <span class="chip">RFID</span>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <h3>Formación académica</h3>
+      <p>
+        <strong>Ingeniería en Informática</strong><br>
+        Tecnológico de Estudios Superiores de San Felipe del Progreso.
+        En curso.
+      </p>
+      <p>
+        <strong>Bachillerato terminado</strong><br>
+        Colegio de Estudios Superiores del Estado de México · 2021–2024.
+      </p>
+      <p>
+        <strong>Formación complementaria:</strong>
+        fundamentos de bases de datos y Oracle.
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="seccion revelar" id="proyectos">
+  <div class="subtitulo">03 · Mi experiencia académica</div>
+  <h2>Mis proyectos de Ingeniería Informática</h2>
+  <p class="descripcion">
+    Algunos proyectos que reflejan mis intereses y los conocimientos
+    que aplico en mi formación.
+  </p>
+
+  <div class="filtros">
+    <button class="filtro activo" data-filtro="todos">Todos</button>
+    <button class="filtro" data-filtro="software">Software</button>
+    <button class="filtro" data-filtro="electronica">Electrónica</button>
+    <button class="filtro" data-filtro="educacion">Educación</button>
+  </div>
+
+  <div class="proyectos">
+
+    <article class="proyecto" data-categoria="software educacion">
+      <div class="proyecto-imagen">🎴</div>
+      <div class="proyecto-contenido">
+        <span class="categoria">Software · Educación</span>
+        <h3>Lotería interactiva mazahua</h3>
+        <p>
+          Proyecto didáctico que combina tarjetas RFID y recursos
+          audiovisuales para apoyar el aprendizaje de vocabulario mazahua.
+        </p>
+        <div class="etiquetas">
+          <span class="chip">Python</span>
+          <span class="chip">ESP32</span>
+          <span class="chip">RFID</span>
+        </div>
+        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+        <div class="detalles">
+          El sistema busca identificar una tarjeta y mostrar su imagen,
+          las palabras en español y mazahua, y el audio de pronunciación.
+          Su objetivo es apoyar el aprendizaje de una lengua indígena
+          mediante herramientas tecnológicas.
+        </div>
+      </div>
+    </article>
+
+    <article class="proyecto" data-categoria="electronica software">
+      <div class="proyecto-imagen">⚡</div>
+      <div class="proyecto-contenido">
+        <span class="categoria">Electrónica · Monitoreo</span>
+        <h3>Prototipo de consumo eléctrico</h3>
+        <p>
+          Prototipo académico orientado a medir y visualizar el consumo
+          eléctrico mediante sensores y conectividad.
+        </p>
+        <div class="etiquetas">
+          <span class="chip">ESP32</span>
+          <span class="chip">Sensores</span>
+          <span class="chip">Monitoreo</span>
+        </div>
+        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+        <div class="detalles">
+          Explora la lectura de señales mediante sensores y el envío
+          de mediciones para consultar información del consumo energético.
+        </div>
+      </div>
+    </article>
+
+    <article class="proyecto" data-categoria="educacion">
+      <div class="proyecto-imagen">💡</div>
+      <div class="proyecto-contenido">
+        <span class="categoria">Educación · Tecnología</span>
+        <h3>Talleres de tecnología</h3>
+        <p>
+          Actividades orientadas a acercar a estudiantes de educación básica
+          a conocimientos sobre tecnología.
+        </p>
+        <div class="etiquetas">
+          <span class="chip">Tecnología</span>
+          <span class="chip">Aprendizaje</span>
+        </div>
+        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+        <div class="detalles">
+          Espacio para documentar las actividades realizadas, los recursos
+          utilizados y los aprendizajes obtenidos durante los talleres.
+        </div>
+      </div>
+    </article>
+
+    <article class="proyecto" data-categoria="software">
+      <div class="proyecto-imagen">⌘</div>
+      <div class="proyecto-contenido">
+        <span class="categoria">Software · Web</span>
+        <h3>Desarrollo de páginas web</h3>
+        <p>
+          Diseño de interfaces y páginas web como parte de las prácticas
+          de programación y desarrollo.
+        </p>
+        <div class="etiquetas">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+        </div>
+        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+        <div class="detalles">
+          Puedes agregar capturas de pantalla, enlaces y una explicación
+          de las herramientas utilizadas en cada página.
+        </div>
+      </div>
+    </article>
+
+    <article class="proyecto" data-categoria="software">
+      <div class="proyecto-imagen">▤</div>
+      <div class="proyecto-contenido">
+        <span class="categoria">Software · Datos</span>
+        <h3>Modelado de bases de datos</h3>
+        <p>
+          Ejercicios académicos para organizar datos, diseñar tablas
+          y representar relaciones entre entidades.
+        </p>
+        <div class="etiquetas">
+          <span class="chip">SQL</span>
+          <span class="chip">Modelado</span>
+        </div>
+        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+        <div class="detalles">
+          Agrega aquí diagramas, consultas y ejemplos de las bases de datos
+          que hayas construido.
+        </div>
+      </div>
+    </article>
+
+    <article class="proyecto" data-categoria="electronica">
+      <div class="proyecto-imagen">◉</div>
+      <div class="proyecto-contenido">
+        <span class="categoria">Electrónica · Programación</span>
+        <h3>Prácticas con Arduino y ESP32</h3>
+        <p>
+          Ejercicios de programación de microcontroladores y pruebas
+          con componentes electrónicos.
+        </p>
+        <div class="etiquetas">
+          <span class="chip">Arduino</span>
+          <span class="chip">Circuitos</span>
+        </div>
+        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+        <div class="detalles">
+          Puedes añadir fotografías de los circuitos, conexiones,
+          código y resultados de las prácticas.
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <p id="mensajeFiltro" aria-live="polite"
+     style="color:var(--gris);font-size:12px">
+    Mostrando todos los proyectos.
+  </p>
+</section>
+
+<!-- PERFIL PROFESIONAL -->
+<section class="seccion revelar" id="vocacion">
+  <div class="subtitulo">04 · Mi futuro</div>
+  <h2>Perfil profesional y vocacional</h2>
+  <p class="descripcion">
+    Las áreas que me interesan y las metas que orientan mi desarrollo.
+  </p>
+
+  <div class="grid">
+    <article class="tarjeta">
+      <h3>Intereses profesionales</h3>
+      <p>
+        Me interesa desarrollarme en programación, desarrollo web,
+        creación de aplicaciones y proyectos que integren software
+        con dispositivos electrónicos. También me interesa la tecnología
+        aplicada a la educación y la solución de problemas cotidianos.
+      </p>
+
+      <div class="etiquetas">
+        <span class="chip">Desarrollo de software</span>
+        <span class="chip">Desarrollo web</span>
+        <span class="chip">IoT y electrónica</span>
+        <span class="chip">Tecnología educativa</span>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <h3>Idiomas y metas</h3>
+      <div class="dato">
+        <small>Inglés</small>
+        <strong>Nivel B1 · Intermedio</strong>
+        <p>
+          Busco fortalecer mi comprensión, conversación, lectura
+          y escritura en inglés.
+        </p>
+      </div>
+      <div class="dato">
+        <small>Meta a corto plazo</small>
+        <strong>Mejorar mis habilidades técnicas y desarrollar proyectos.</strong>
+      </div>
+      <div class="dato">
+        <small>Meta a futuro</small>
+        <strong>Participar en proyectos profesionales y continuar aprendiendo.</strong>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="seccion revelar" id="contacto">
+  <div class="contacto">
+    <div class="etiqueta">Contacto</div>
+    <h2>Conoce más sobre mi perfil</h2>
+    <p>
+      Estoy interesada en seguir aprendiendo y desarrollar proyectos
+      relacionados con la tecnología.
+    </p>
+    <a class="boton" href="mailto:abrilsnchz67@gmail.com">
+      Enviar correo ✉
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © <span id="anio"></span> Abril Sanchez Segundo · Portafolio personal
+</footer>
+
+<button id="arriba" aria-label="Volver al inicio">↑</button>
+
+<script>
+// Menú móvil
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => {
+  const abierto = menu.classList.toggle("abierto");
+  menuBtn.setAttribute("aria-expanded", String(abierto));
+  menuBtn.textContent = abierto ? "✕ Cerrar" : "☰ Menú";
+});
+
+// Cerrar el menú móvil después de seleccionar una página
+document.querySelectorAll(".menu a").forEach(enlace => {
+  enlace.addEventListener("click", () => {
+    menu.classList.remove("abierto");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.textContent = "☰ Menú";
+  });
+});
+
+// Filtrar proyectos
+document.querySelectorAll(".filtro").forEach(boton => {
+  boton.addEventListener("click", () => {
+    document.querySelectorAll(".filtro").forEach(b =>
+      b.classList.remove("activo")
+    );
+
+    boton.classList.add("activo");
+    const categoria = boton.dataset.filtro;
+    let cantidad = 0;
+
+    document.querySelectorAll(".proyecto").forEach(proyecto => {
+      const categorias = proyecto.dataset.categoria.split(" ");
+      const mostrar = categoria === "todos" ||
+                      categorias.includes(categoria);
+
+      proyecto.hidden = !mostrar;
+      if (mostrar) cantidad++;
+    });
+
+    document.getElementById("mensajeFiltro").textContent =
+      categoria === "todos"
+        ? "Mostrando todos los proyectos."
+        : `Se muestran ${cantidad} proyecto(s) de esta categoría.`;
+  });
+});
+
+// Abrir y cerrar detalles de los proyectos
+document.querySelectorAll(".ver-mas").forEach(boton => {
+  boton.addEventListener("click", () => {
+    const proyecto = boton.closest(".proyecto");
+    const abierto = proyecto.classList.toggle("abierto");
+
+    boton.textContent = abierto
+      ? "Ocultar detalles −"
+      : "Ver detalles ＋";
+
+    boton.setAttribute("aria-expanded", String(abierto));
+  });
+});
+
+// Botón volver arriba
+const botonArriba = document.getElementById("arriba");
+
+window.addEventListener("scroll", () => {
+  botonArriba.classList.toggle("mostrar", window.scrollY > 400);
+});
+
+botonArriba.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Animación de entrada
+const observador = new IntersectionObserver(entradas => {
+  entradas.forEach(entrada => {
+    if (entrada.isIntersecting) {
+      entrada.target.classList.add("visible");
+      observador.unobserve(entrada.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".revelar").forEach(seccion => {
+  observador.observe(seccion);
+});
+
+// Año automático
+document.getElementById("anio").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
