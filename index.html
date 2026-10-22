@@ -4,16 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abril Sanchez Segundo | Portafolio</title>
+
+<title>Abril Sánchez Segundo | Portafolio Profesional</title>
+<meta name="description" content="Portafolio profesional de Abril Sánchez Segundo, estudiante de Ingeniería en Informática, interesada en desarrollo de software, programación y tecnología.">
 
 <style>
 :root {
-  --azul: #17365d;
-  --azul2: #356b9b;
-  --fondo: #f4f7fb;
-  --texto: #28374a;
+  --azul: #101b32;
+  --azul2: #2878d0;
+  --azul-claro: #8fc5ff;
+  --fondo: #f5f7fb;
+  --texto: #202c3c;
   --gris: #68778a;
   --blanco: #ffffff;
+  --borde: #e0e7f0;
 }
 
 * {
@@ -29,14 +33,14 @@ body {
   line-height: 1.7;
 }
 
-/* MENÚ PRINCIPAL */
 header {
-  background: var(--azul);
+  background: #0b1426;
   color: white;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 18px #142c4b25;
+  box-shadow: 0 4px 20px #101b321a;
+  border-bottom: 1px solid #24344d;
 }
 
 nav {
@@ -53,6 +57,7 @@ nav {
   font-weight: bold;
   font-size: 17px;
   white-space: nowrap;
+  letter-spacing: .5px;
 }
 
 .menu {
@@ -72,11 +77,8 @@ nav {
 
 .menu a:hover,
 .menu a.activo {
-  background: #ffffff25;
-}
-
-.menu a.proximamente {
-  color: #c8d5e5;
+  background: #ffffff1c;
+  color: var(--azul-claro);
 }
 
 .menu-btn {
@@ -89,18 +91,19 @@ nav {
   cursor: pointer;
 }
 
-/* PORTADA */
+/* PORTADA PROFESIONAL */
 .hero {
   background:
-    radial-gradient(circle at 85% 15%, #3c709f 0, transparent 30%),
-    linear-gradient(120deg, #142b49, #356b9b);
+    radial-gradient(circle at 85% 15%, #2878d055 0, transparent 32%),
+    linear-gradient(120deg, #0b1426, #172b49 65%, #203e63);
   color: white;
 }
 
 .hero-contenido {
   max-width: 1150px;
+  min-height: 510px;
   margin: auto;
-  padding: 70px 25px;
+  padding: 75px 25px;
   display: grid;
   grid-template-columns: 1.3fr .7fr;
   align-items: center;
@@ -108,7 +111,7 @@ nav {
 }
 
 .etiqueta {
-  color: #bcd8f0;
+  color: var(--azul-claro);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 11px;
@@ -118,16 +121,34 @@ nav {
 .hero h1 {
   font-size: clamp(35px, 5vw, 57px);
   line-height: 1.15;
+  letter-spacing: -1px;
   margin: 15px 0;
 }
 
 .hero h1 span {
-  color: #b9d9f2;
+  color: var(--azul-claro);
+}
+
+.cargo-profesional {
+  color: var(--azul-claro);
+  font-size: clamp(21px, 3vw, 29px);
+  line-height: 1.35;
+  margin: 0 0 18px;
 }
 
 .hero p {
   color: #e1ebf5;
   max-width: 650px;
+}
+
+.hero-etiquetas {
+  margin: 20px 0;
+}
+
+.hero-etiquetas .chip {
+  background: #ffffff12;
+  border-color: #ffffff30;
+  color: #e5efff;
 }
 
 .foto-contenedor {
@@ -140,12 +161,13 @@ nav {
   object-fit: cover;
   object-position: center 25%;
   border-radius: 22px;
-  border: 5px solid white;
-  box-shadow: 0 15px 40px #0003;
+  border: 3px solid #ffffffcc;
+  box-shadow: 0 20px 55px #0005;
 }
 
 .foto-texto {
   display: table;
+  max-width: 100%;
   margin: -20px auto 0;
   position: relative;
   background: white;
@@ -168,6 +190,7 @@ nav {
   cursor: pointer;
   font-weight: bold;
   font-size: 13px;
+  font-family: inherit;
   transition: .3s;
 }
 
@@ -177,9 +200,13 @@ nav {
 }
 
 .boton-azul {
-  background: var(--azul);
+  background: var(--azul2);
   color: white;
-  border-color: var(--azul);
+  border-color: var(--azul2);
+}
+
+.boton-azul:hover {
+  background: #1c5eaa;
 }
 
 /* CONTENIDO */
@@ -224,13 +251,14 @@ h2 {
   background: white;
   padding: 24px;
   border-radius: 16px;
-  border: 1px solid #dce5ee;
-  box-shadow: 0 7px 25px #142c4b09;
+  border: 1px solid var(--borde);
+  box-shadow: 0 8px 28px #101b320a;
   transition: .3s;
 }
 
 .tarjeta:hover {
-  box-shadow: 0 12px 30px #142c4b15;
+  border-color: #b8d6f5;
+  box-shadow: 0 15px 35px #101b3214;
   transform: translateY(-2px);
 }
 
@@ -246,7 +274,7 @@ h2 {
 
 .dato {
   padding: 12px 0;
-  border-bottom: 1px solid #e1e8ef;
+  border-bottom: 1px solid var(--borde);
   overflow-wrap: anywhere;
 }
 
@@ -264,6 +292,7 @@ h2 {
 
 .dato a {
   color: var(--azul2);
+  overflow-wrap: anywhere;
 }
 
 .etiquetas {
@@ -273,6 +302,7 @@ h2 {
 }
 
 .chip {
+  display: inline-block;
   background: #edf4fa;
   color: #294f76;
   border: 1px solid #d6e5f2;
@@ -281,7 +311,7 @@ h2 {
   font-size: 12px;
 }
 
-/* APRENDIZAJES */
+/* HABILIDADES */
 .habilidades {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -291,14 +321,14 @@ h2 {
 .habilidad {
   background: white;
   padding: 22px;
-  border: 1px solid #dce5ee;
+  border: 1px solid var(--borde);
   border-radius: 15px;
   transition: .3s;
 }
 
 .habilidad:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px #142c4b12;
+  box-shadow: 0 10px 25px #101b3212;
 }
 
 .icono {
@@ -315,7 +345,67 @@ h2 {
   font-size: 13px;
 }
 
-/* FILTROS DE PROYECTOS */
+/* CURSOS Y CERTIFICACIONES */
+.cursos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.curso {
+  background: white;
+  padding: 25px;
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px #101b320a;
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.curso::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2878d0, #8fc5ff);
+}
+
+.curso:hover {
+  transform: translateY(-5px);
+  border-color: #b8d6f5;
+  box-shadow: 0 15px 35px #101b3214;
+}
+
+.curso-icono {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.curso h3 {
+  color: var(--azul);
+  margin: 8px 0;
+}
+
+.curso p {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.curso-institucion {
+  display: inline-block;
+  color: var(--azul2);
+  background: #edf4fa;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* FILTROS */
 .filtros {
   display: flex;
   flex-wrap: wrap;
@@ -325,17 +415,27 @@ h2 {
 
 .filtro {
   padding: 9px 14px;
-  border: 1px solid #dce5ee;
+  border: 1px solid var(--borde);
   background: white;
   border-radius: 30px;
   cursor: pointer;
   color: var(--texto);
+  transition: .3s;
 }
 
 .filtro.activo,
 .filtro:hover {
   background: var(--azul);
   color: white;
+  border-color: var(--azul);
+}
+
+.filtro:focus-visible,
+.boton:focus-visible,
+.ver-mas:focus-visible,
+.menu a:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
 }
 
 .proyectos {
@@ -346,7 +446,7 @@ h2 {
 
 .proyecto {
   background: white;
-  border: 1px solid #dce5ee;
+  border: 1px solid var(--borde);
   border-radius: 16px;
   overflow: hidden;
   transition: .3s;
@@ -354,11 +454,11 @@ h2 {
 
 .proyecto:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px #142c4b15;
+  box-shadow: 0 12px 30px #101b3215;
 }
 
 .proyecto[hidden] {
-  display: none;
+  display: none !important;
 }
 
 .proyecto-imagen {
@@ -411,11 +511,12 @@ h2 {
   padding: 5px 0;
   font-weight: bold;
   cursor: pointer;
+  font-size: 13px;
 }
 
 .detalles {
   display: none;
-  border-top: 1px solid #e1e8ef;
+  border-top: 1px solid var(--borde);
   padding-top: 12px;
   margin-top: 12px;
   font-size: 13px;
@@ -428,9 +529,11 @@ h2 {
 
 /* CONTACTO */
 .contacto {
-  background: linear-gradient(120deg, #17365d, #356b9b);
+  background:
+    radial-gradient(circle at 90% 10%, #4e91d755, transparent 35%),
+    linear-gradient(120deg, #0b1426, #203e63);
   color: white;
-  padding: 30px;
+  padding: 32px;
   border-radius: 18px;
 }
 
@@ -447,7 +550,8 @@ footer {
   color: var(--gris);
   padding: 25px;
   font-size: 12px;
-  border-top: 1px solid #dce5ee;
+  border-top: 1px solid var(--borde);
+  background: #eef2f8;
 }
 
 #arriba {
@@ -472,10 +576,11 @@ footer {
   pointer-events: auto;
 }
 
+/* ANIMACIONES */
 .revelar {
   opacity: 0;
   transform: translateY(15px);
-  transition: .6s;
+  transition: opacity .6s, transform .6s;
 }
 
 .revelar.visible {
@@ -483,6 +588,7 @@ footer {
   transform: translateY(0);
 }
 
+/* TABLET */
 @media (max-width: 850px) {
   .menu a {
     font-size: 11px;
@@ -494,6 +600,7 @@ footer {
   }
 }
 
+/* CELULAR */
 @media (max-width: 650px) {
   nav {
     flex-wrap: wrap;
@@ -543,18 +650,32 @@ footer {
 
   .grid,
   .habilidades,
-  .proyectos {
+  .proyectos,
+  .cursos {
     grid-template-columns: 1fr;
   }
 
   h2 {
     font-size: 27px;
   }
+
+  .contacto {
+    padding: 24px;
+  }
 }
 
+/* IMPRESIÓN DEL CV */
 @media print {
-  header, .filtros, .ver-mas, #arriba {
+  header,
+  .filtros,
+  .ver-mas,
+  #arriba,
+  .boton {
     display: none !important;
+  }
+
+  body {
+    background: white;
   }
 
   .hero {
@@ -566,13 +687,28 @@ footer {
     padding: 20px 0;
   }
 
-  .tarjeta, .proyecto, .habilidad {
+  .tarjeta,
+  .proyecto,
+  .habilidad,
+  .curso {
     break-inside: avoid;
+    box-shadow: none;
+  }
+
+  .revelar {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .detalles {
+    display: block;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     scroll-behavior: auto !important;
     transition: none !important;
   }
@@ -589,44 +725,78 @@ footer {
 
 <header>
   <nav>
-    <div class="logo">AS | Mi portafolio</div>
+    <div class="logo">AS | Portafolio profesional</div>
 
     <button class="menu-btn" id="menuBtn"
-      aria-expanded="false" aria-controls="menu">☰ Menú</button>
+      aria-expanded="false" aria-controls="menu">
+      ☰ Menú
+    </button>
 
     <div class="menu" id="menu">
       <a href="sobre-mi.html" class="activo">Sobre mí</a>
       <a href="personal-social.html">Personal y social</a>
       <a href="aprendizajes-proyectos.html">Aprendizajes y proyectos</a>
       <a href="profesional-vocacional.html">Profesional y vocacional</a>
+      <a href="#cursos">Cursos y certificaciones</a>
     </div>
   </nav>
 </header>
 
-<!-- PORTADA DEL CURRÍCULUM -->
+<!-- PORTADA -->
 <section class="hero" id="inicio">
   <div class="hero-contenido">
-    <div>
-      <div class="etiqueta">Currículum vitae · Portafolio personal</div>
 
-      <h1>Hola, soy <span>Abril Sanchez Segundo</span></h1>
+    <div>
+      <div class="etiqueta">
+        DESARROLLO · TECNOLOGÍA · INNOVACIÓN
+      </div>
+
+      <h1>
+        Hola, soy <span>Abril Sánchez Segundo</span>
+      </h1>
+
+      <h2 class="cargo-profesional">
+        Profesionista en desarrollo de software en formación
+      </h2>
 
       <p>
-        Estudiante de Ingeniería en Informática, interesada en el desarrollo
-        de software, las tecnologías web y los sistemas electrónicos.
-        Este espacio presenta quién soy, cómo aprendo, qué sé hacer
-        y los proyectos que desarrollo durante mi formación.
+        Me estoy desarrollando profesionalmente en el área de la tecnología,
+        con interés en la programación, el desarrollo web y la creación de
+        soluciones digitales. Me enfoco en fortalecer mis habilidades
+        técnicas, construir proyectos funcionales y aplicar mis conocimientos
+        para resolver problemas mediante el software y la innovación.
       </p>
 
-      <a href="#proyectos" class="boton">Conocer mis proyectos ↓</a>
-      <button class="boton" onclick="window.print()">Guardar CV en PDF</button>
+      <div class="etiquetas hero-etiquetas">
+        <span class="chip">Desarrollo web</span>
+        <span class="chip">Programación</span>
+        <span class="chip">Bases de datos</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Tecnología</span>
+      </div>
+
+      <a href="#proyectos" class="boton">
+        Explorar proyectos ↓
+      </a>
+
+      <a href="#contacto" class="boton boton-azul">
+        Contactarme ↗
+      </a>
+
+      <button class="boton" onclick="window.print()">
+        Guardar CV en PDF
+      </button>
     </div>
 
     <div class="foto-contenedor">
-      <img src="abril.jpg" alt="Fotografía de Abril Sanchez Segundo"
+      <img src="abril.jpg"
+        alt="Fotografía de Abril Sánchez Segundo"
         class="foto">
-      <div class="foto-texto">Ingeniería en Informática</div>
+      <div class="foto-texto">
+        Desarrollo · Programación · Innovación
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -635,20 +805,21 @@ footer {
 <!-- PERFIL -->
 <section class="seccion revelar" id="perfil">
   <div class="subtitulo">01 · Mi perfil</div>
-  <h2>¿Quién soy?</h2>
+  <h2>Perfil profesional</h2>
   <p class="descripcion">
-    Una presentación de mi formación, mis intereses y las habilidades
-    que estoy desarrollando.
+    Mis intereses, valores y orientación hacia el desarrollo tecnológico.
   </p>
 
   <div class="grid">
     <article class="tarjeta">
       <h3>Sobre mí</h3>
       <p>
-        Soy estudiante de Ingeniería en Informática. Me interesa la tecnología
-        y la creación de soluciones que sean útiles, organizadas y accesibles.
-        Disfruto aprender herramientas nuevas, resolver problemas y participar
-        en proyectos donde puedo aplicar mis conocimientos.
+        Soy una persona interesada en el desarrollo de software y la
+        innovación tecnológica. Me gusta crear soluciones funcionales,
+        diseñar interfaces y explorar herramientas que permitan resolver
+        necesidades reales. Actualmente continúo mi formación en Ingeniería
+        en Informática mientras fortalezco mis conocimientos mediante
+        ejercicios prácticos y proyectos tecnológicos.
       </p>
 
       <h3>Mis valores</h3>
@@ -677,7 +848,7 @@ footer {
       </div>
 
       <div class="dato">
-        <small>Institución</small>
+        <small>Institución actual</small>
         <strong>
           Tecnológico de Estudios Superiores de San Felipe del Progreso
         </strong>
@@ -686,53 +857,53 @@ footer {
   </div>
 </section>
 
-<!-- CÓMO APRENDO -->
+<!-- HABILIDADES Y FORMACIÓN ACADÉMICA -->
 <section class="seccion revelar" id="aprendizaje">
-  <div class="subtitulo">02 · Mi forma de aprender</div>
+  <div class="subtitulo">02 · Habilidades y conocimientos</div>
   <h2>Cómo aprendo y qué sé hacer</h2>
   <p class="descripcion">
-    Mis estrategias de aprendizaje y las herramientas que he comenzado
-    a utilizar en Ingeniería Informática.
+    Capacidades que estoy fortaleciendo mediante la práctica,
+    mis estudios y el desarrollo de proyectos.
   </p>
 
   <div class="habilidades">
     <article class="habilidad">
       <div class="icono">🧩</div>
-      <h3>Cómo aprendo</h3>
+      <h3>Resolución de problemas</h3>
       <p>
-        Aprendo mejor combinando la explicación con la práctica. Observo
-        ejemplos, sigo pasos, experimento con el código, identifico errores
-        y pruebo soluciones. También me ayuda dividir las tareas grandes
-        en objetivos pequeños.
+        Analizo las tareas, las divido en objetivos pequeños, pruebo
+        alternativas y reviso los resultados para encontrar soluciones.
       </p>
     </article>
 
     <article class="habilidad">
       <div class="icono">💻</div>
-      <h3>Qué sé hacer</h3>
+      <h3>Desarrollo tecnológico</h3>
       <p>
-        Crear páginas web básicas con HTML y CSS, desarrollar ejercicios
-        de programación con Python y Java, realizar prácticas con Arduino
-        y ESP32, organizar información y colaborar en proyectos tecnológicos.
+        Trabajo con páginas web, ejercicios de programación y prácticas
+        de integración entre software, bases de datos y dispositivos.
       </p>
     </article>
 
     <article class="habilidad">
-      <div class="icono">🌱</div>
-      <h3>Qué quiero mejorar</h3>
+      <div class="icono">📈</div>
+      <h3>Mejora continua</h3>
       <p>
-        Seguir practicando desarrollo web, programación, bases de datos,
-        integración de hardware y software, documentación y comunicación técnica.
+        Busco ampliar mis conocimientos, mejorar la calidad del código,
+        documentar mis proyectos y aprender herramientas nuevas.
       </p>
     </article>
   </div>
 
   <div class="grid" style="margin-top:22px">
+
     <article class="tarjeta">
       <h3>Conocimientos técnicos</h3>
+
       <div class="etiquetas">
         <span class="chip">HTML</span>
         <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
         <span class="chip">Python</span>
         <span class="chip">Java</span>
         <span class="chip">Arduino</span>
@@ -740,171 +911,301 @@ footer {
         <span class="chip">Bases de datos</span>
         <span class="chip">RFID</span>
       </div>
+
+      <p>
+        Tecnologías y herramientas con las que he realizado prácticas
+        y proyectos durante mi formación académica.
+      </p>
     </article>
 
     <article class="tarjeta">
       <h3>Formación académica</h3>
-      <p>
-        <strong>Ingeniería en Informática</strong><br>
-        Tecnológico de Estudios Superiores de San Felipe del Progreso.
-        En curso.
-      </p>
-      <p>
-        <strong>Bachillerato terminado</strong><br>
-        Colegio de Estudios Superiores del Estado de México · 2021–2024.
-      </p>
-      <p>
-        <strong>Formación complementaria:</strong>
-        fundamentos de bases de datos y Oracle.
-      </p>
+
+      <div class="dato">
+        <small>Estudios actuales</small>
+        <strong>Ingeniería en Informática</strong>
+        <p>
+          Tecnológico de Estudios Superiores de San Felipe del Progreso.
+        </p>
+        <span class="chip">En curso</span>
+      </div>
+
+      <div class="dato">
+        <small>Educación media superior</small>
+        <strong>COBAEM, Plantel 29</strong>
+        <p>
+          Colegio de Bachilleres del Estado de México.
+        </p>
+        <span class="chip">Preparatoria</span>
+      </div>
+
+      <div class="dato">
+        <small>Educación secundaria</small>
+        <strong>
+          Escuela Secundaria Oficial No. 244
+          Lic. Adolfo López Mateos
+        </strong>
+        <p>
+          Educación secundaria.
+        </p>
+      </div>
     </article>
+
+  </div>
+</section>
+
+<!-- CURSOS -->
+<section class="seccion revelar" id="cursos">
+  <div class="subtitulo">03 · Formación complementaria</div>
+  <h2>Cursos y certificaciones</h2>
+
+  <p class="descripcion">
+    Cursos que he realizado para ampliar mis conocimientos y fortalecer
+    mi formación en el área tecnológica.
+  </p>
+
+  <div class="cursos">
+
+    <article class="curso">
+      <div class="curso-icono">🗄️</div>
+
+      <span class="curso-institucion">Oracle</span>
+
+      <h3>Fundamentos de bases de datos</h3>
+
+      <p>
+        Formación enfocada en los conceptos fundamentales de las bases
+        de datos, su organización y la importancia de administrar
+        información de manera estructurada.
+      </p>
+
+      <div class="etiquetas">
+        <span class="chip">Bases de datos</span>
+        <span class="chip">Gestión de información</span>
+        <span class="chip">Oracle</span>
+      </div>
+    </article>
+
+    <article class="curso">
+      <div class="curso-icono">🤖</div>
+
+      <span class="curso-institucion">Huawei</span>
+
+      <h3>Machine Learning</h3>
+
+      <p>
+        Formación relacionada con los fundamentos del aprendizaje
+        automático, una rama de la inteligencia artificial que permite
+        a los sistemas identificar patrones y aprender a partir de datos.
+      </p>
+
+      <div class="etiquetas">
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Inteligencia artificial</span>
+        <span class="chip">Análisis de datos</span>
+      </div>
+    </article>
+
   </div>
 </section>
 
 <!-- PROYECTOS -->
 <section class="seccion revelar" id="proyectos">
-  <div class="subtitulo">03 · Mi experiencia académica</div>
-  <h2>Mis proyectos de Ingeniería Informática</h2>
+  <div class="subtitulo">04 · Portafolio de proyectos</div>
+  <h2>Proyectos de desarrollo</h2>
+
   <p class="descripcion">
-    Algunos proyectos que reflejan mis intereses y los conocimientos
-    que aplico en mi formación.
+    Una muestra de las soluciones tecnológicas que he desarrollado
+    como parte de mi experiencia práctica y formación académica.
   </p>
 
-  <div class="filtros">
-    <button class="filtro activo" data-filtro="todos">Todos</button>
-    <button class="filtro" data-filtro="software">Software</button>
-    <button class="filtro" data-filtro="electronica">Electrónica</button>
-    <button class="filtro" data-filtro="educacion">Educación</button>
+  <div class="filtros" role="group" aria-label="Filtrar proyectos">
+    <button class="filtro activo" data-filtro="todos"
+      aria-pressed="true">Todos</button>
+
+    <button class="filtro" data-filtro="software"
+      aria-pressed="false">Software</button>
+
+    <button class="filtro" data-filtro="electronica"
+      aria-pressed="false">Electrónica</button>
+
+    <button class="filtro" data-filtro="educacion"
+      aria-pressed="false">Educación</button>
   </div>
 
   <div class="proyectos">
 
     <article class="proyecto" data-categoria="software educacion">
       <div class="proyecto-imagen">🎴</div>
+
       <div class="proyecto-contenido">
         <span class="categoria">Software · Educación</span>
         <h3>Lotería interactiva mazahua</h3>
+
         <p>
-          Proyecto didáctico que combina tarjetas RFID y recursos
+          Sistema didáctico que integra tarjetas RFID y recursos
           audiovisuales para apoyar el aprendizaje de vocabulario mazahua.
         </p>
+
         <div class="etiquetas">
           <span class="chip">Python</span>
           <span class="chip">ESP32</span>
           <span class="chip">RFID</span>
         </div>
-        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+
+        <button class="ver-mas" aria-expanded="false">
+          Ver detalles ＋
+        </button>
+
         <div class="detalles">
-          El sistema busca identificar una tarjeta y mostrar su imagen,
-          las palabras en español y mazahua, y el audio de pronunciación.
-          Su objetivo es apoyar el aprendizaje de una lengua indígena
-          mediante herramientas tecnológicas.
+          El sistema identifica una tarjeta y permite mostrar su imagen,
+          la palabra en español y mazahua y el audio de pronunciación.
+          Busca apoyar el aprendizaje de una lengua indígena mediante
+          recursos tecnológicos.
         </div>
       </div>
     </article>
 
     <article class="proyecto" data-categoria="electronica software">
       <div class="proyecto-imagen">⚡</div>
+
       <div class="proyecto-contenido">
         <span class="categoria">Electrónica · Monitoreo</span>
         <h3>Prototipo de consumo eléctrico</h3>
+
         <p>
-          Prototipo académico orientado a medir y visualizar el consumo
-          eléctrico mediante sensores y conectividad.
+          Prototipo orientado a medir y visualizar información relacionada
+          con el consumo eléctrico mediante sensores y conectividad.
         </p>
+
         <div class="etiquetas">
           <span class="chip">ESP32</span>
           <span class="chip">Sensores</span>
           <span class="chip">Monitoreo</span>
         </div>
-        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+
+        <button class="ver-mas" aria-expanded="false">
+          Ver detalles ＋
+        </button>
+
         <div class="detalles">
           Explora la lectura de señales mediante sensores y el envío
-          de mediciones para consultar información del consumo energético.
+          de mediciones para facilitar su consulta y visualización.
         </div>
       </div>
     </article>
 
     <article class="proyecto" data-categoria="educacion">
       <div class="proyecto-imagen">💡</div>
+
       <div class="proyecto-contenido">
         <span class="categoria">Educación · Tecnología</span>
-        <h3>Talleres de tecnología</h3>
+        <h3>Actividades tecnológicas</h3>
+
         <p>
-          Actividades orientadas a acercar a estudiantes de educación básica
-          a conocimientos sobre tecnología.
+          Actividades y recursos para acercar conocimientos tecnológicos
+          a estudiantes y facilitar el aprendizaje.
         </p>
+
         <div class="etiquetas">
           <span class="chip">Tecnología</span>
           <span class="chip">Aprendizaje</span>
         </div>
-        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+
+        <button class="ver-mas" aria-expanded="false">
+          Ver detalles ＋
+        </button>
+
         <div class="detalles">
-          Espacio para documentar las actividades realizadas, los recursos
-          utilizados y los aprendizajes obtenidos durante los talleres.
+          Espacio para documentar las actividades realizadas,
+          los materiales utilizados y los resultados obtenidos.
         </div>
       </div>
     </article>
 
     <article class="proyecto" data-categoria="software">
       <div class="proyecto-imagen">⌘</div>
+
       <div class="proyecto-contenido">
         <span class="categoria">Software · Web</span>
         <h3>Desarrollo de páginas web</h3>
+
         <p>
-          Diseño de interfaces y páginas web como parte de las prácticas
-          de programación y desarrollo.
+          Diseño de interfaces web con estructura clara, navegación
+          intuitiva y estilos adaptables a diferentes dispositivos.
         </p>
+
         <div class="etiquetas">
           <span class="chip">HTML</span>
           <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
         </div>
-        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+
+        <button class="ver-mas" aria-expanded="false">
+          Ver detalles ＋
+        </button>
+
         <div class="detalles">
-          Puedes agregar capturas de pantalla, enlaces y una explicación
-          de las herramientas utilizadas en cada página.
+          Este proyecto puede incluir capturas de pantalla, enlaces
+          a páginas publicadas y una descripción de las tecnologías
+          utilizadas.
         </div>
       </div>
     </article>
 
     <article class="proyecto" data-categoria="software">
       <div class="proyecto-imagen">▤</div>
+
       <div class="proyecto-contenido">
         <span class="categoria">Software · Datos</span>
         <h3>Modelado de bases de datos</h3>
+
         <p>
-          Ejercicios académicos para organizar datos, diseñar tablas
-          y representar relaciones entre entidades.
+          Diseño y organización de datos mediante tablas, relaciones
+          y estructuras orientadas a mantener información organizada.
         </p>
+
         <div class="etiquetas">
           <span class="chip">SQL</span>
           <span class="chip">Modelado</span>
         </div>
-        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+
+        <button class="ver-mas" aria-expanded="false">
+          Ver detalles ＋
+        </button>
+
         <div class="detalles">
-          Agrega aquí diagramas, consultas y ejemplos de las bases de datos
-          que hayas construido.
+          Aquí se pueden agregar diagramas entidad-relación,
+          modelos relacionales y ejemplos de consultas elaboradas.
         </div>
       </div>
     </article>
 
     <article class="proyecto" data-categoria="electronica">
       <div class="proyecto-imagen">◉</div>
+
       <div class="proyecto-contenido">
         <span class="categoria">Electrónica · Programación</span>
         <h3>Prácticas con Arduino y ESP32</h3>
+
         <p>
-          Ejercicios de programación de microcontroladores y pruebas
-          con componentes electrónicos.
+          Programación de microcontroladores y pruebas con componentes
+          electrónicos para explorar soluciones automatizadas.
         </p>
+
         <div class="etiquetas">
           <span class="chip">Arduino</span>
+          <span class="chip">ESP32</span>
           <span class="chip">Circuitos</span>
         </div>
-        <button class="ver-mas" aria-expanded="false">Ver detalles ＋</button>
+
+        <button class="ver-mas" aria-expanded="false">
+          Ver detalles ＋
+        </button>
+
         <div class="detalles">
-          Puedes añadir fotografías de los circuitos, conexiones,
-          código y resultados de las prácticas.
+          Se pueden añadir fotografías de circuitos, diagramas
+          de conexión, fragmentos de código y resultados de pruebas.
         </div>
       </div>
     </article>
@@ -912,68 +1213,84 @@ footer {
   </div>
 
   <p id="mensajeFiltro" aria-live="polite"
-     style="color:var(--gris);font-size:12px">
+    style="color:var(--gris);font-size:12px">
     Mostrando todos los proyectos.
   </p>
 </section>
 
-<!-- PERFIL PROFESIONAL -->
+<!-- OBJETIVOS PROFESIONALES -->
 <section class="seccion revelar" id="vocacion">
-  <div class="subtitulo">04 · Mi futuro</div>
-  <h2>Perfil profesional y vocacional</h2>
+  <div class="subtitulo">05 · Objetivos profesionales</div>
+  <h2>Mi orientación profesional</h2>
+
   <p class="descripcion">
-    Las áreas que me interesan y las metas que orientan mi desarrollo.
+    Áreas de interés y metas que orientan mi crecimiento en tecnología.
   </p>
 
   <div class="grid">
+
     <article class="tarjeta">
-      <h3>Intereses profesionales</h3>
+      <h3>Áreas de interés</h3>
+
       <p>
-        Me interesa desarrollarme en programación, desarrollo web,
-        creación de aplicaciones y proyectos que integren software
-        con dispositivos electrónicos. También me interesa la tecnología
-        aplicada a la educación y la solución de problemas cotidianos.
+        Me interesa crecer en programación, desarrollo web, creación de
+        aplicaciones y proyectos que integren software con dispositivos
+        electrónicos. También me atrae la tecnología aplicada a la educación
+        y al desarrollo de soluciones para problemas cotidianos.
       </p>
 
       <div class="etiquetas">
         <span class="chip">Desarrollo de software</span>
         <span class="chip">Desarrollo web</span>
         <span class="chip">IoT y electrónica</span>
+        <span class="chip">Inteligencia artificial</span>
         <span class="chip">Tecnología educativa</span>
       </div>
     </article>
 
     <article class="tarjeta">
       <h3>Idiomas y metas</h3>
+
       <div class="dato">
         <small>Inglés</small>
         <strong>Nivel B1 · Intermedio</strong>
         <p>
-          Busco fortalecer mi comprensión, conversación, lectura
-          y escritura en inglés.
+          Fortalecer la comprensión, conversación, lectura y escritura
+          en inglés.
         </p>
       </div>
+
       <div class="dato">
         <small>Meta a corto plazo</small>
-        <strong>Mejorar mis habilidades técnicas y desarrollar proyectos.</strong>
+        <strong>
+          Fortalecer mis habilidades técnicas y documentar mis proyectos.
+        </strong>
       </div>
+
       <div class="dato">
-        <small>Meta a futuro</small>
-        <strong>Participar en proyectos profesionales y continuar aprendiendo.</strong>
+        <small>Meta a largo plazo</small>
+        <strong>
+          Consolidar mi perfil profesional y participar en proyectos
+          de desarrollo de software.
+        </strong>
       </div>
     </article>
+
   </div>
 </section>
 
 <!-- CONTACTO -->
 <section class="seccion revelar" id="contacto">
   <div class="contacto">
-    <div class="etiqueta">Contacto</div>
-    <h2>Conoce más sobre mi perfil</h2>
+    <div class="etiqueta">Contacto profesional</div>
+
+    <h2>Hablemos de tecnología</h2>
+
     <p>
-      Estoy interesada en seguir aprendiendo y desarrollar proyectos
-      relacionados con la tecnología.
+      Me interesa continuar desarrollando proyectos, compartir ideas
+      y ampliar mis conocimientos en el área tecnológica.
     </p>
+
     <a class="boton" href="mailto:abrilsnchz67@gmail.com">
       Enviar correo ✉
     </a>
@@ -983,7 +1300,7 @@ footer {
 </main>
 
 <footer>
-  © <span id="anio"></span> Abril Sanchez Segundo · Portafolio personal
+  © <span id="anio"></span> Abril Sánchez Segundo · Portafolio profesional
 </footer>
 
 <button id="arriba" aria-label="Volver al inicio">↑</button>
@@ -999,7 +1316,7 @@ menuBtn.addEventListener("click", () => {
   menuBtn.textContent = abierto ? "✕ Cerrar" : "☰ Menú";
 });
 
-// Cerrar el menú móvil después de seleccionar una página
+// Cerrar menú móvil al seleccionar un enlace
 document.querySelectorAll(".menu a").forEach(enlace => {
   enlace.addEventListener("click", () => {
     menu.classList.remove("abierto");
@@ -1011,11 +1328,14 @@ document.querySelectorAll(".menu a").forEach(enlace => {
 // Filtrar proyectos
 document.querySelectorAll(".filtro").forEach(boton => {
   boton.addEventListener("click", () => {
-    document.querySelectorAll(".filtro").forEach(b =>
-      b.classList.remove("activo")
-    );
+    document.querySelectorAll(".filtro").forEach(b => {
+      b.classList.remove("activo");
+      b.setAttribute("aria-pressed", "false");
+    });
 
     boton.classList.add("activo");
+    boton.setAttribute("aria-pressed", "true");
+
     const categoria = boton.dataset.filtro;
     let cantidad = 0;
 
@@ -1025,6 +1345,7 @@ document.querySelectorAll(".filtro").forEach(boton => {
                       categorias.includes(categoria);
 
       proyecto.hidden = !mostrar;
+
       if (mostrar) cantidad++;
     });
 
@@ -1035,7 +1356,7 @@ document.querySelectorAll(".filtro").forEach(boton => {
   });
 });
 
-// Abrir y cerrar detalles de los proyectos
+// Abrir y cerrar detalles
 document.querySelectorAll(".ver-mas").forEach(boton => {
   boton.addEventListener("click", () => {
     const proyecto = boton.closest(".proyecto");
@@ -1060,22 +1381,29 @@ botonArriba.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Animación de entrada
-const observador = new IntersectionObserver(entradas => {
-  entradas.forEach(entrada => {
-    if (entrada.isIntersecting) {
-      entrada.target.classList.add("visible");
-      observador.unobserve(entrada.target);
-    }
-  });
-}, { threshold: 0.1 });
+// Animaciones de entrada
+if ("IntersectionObserver" in window) {
+  const observador = new IntersectionObserver(entradas => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add("visible");
+        observador.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.1 });
 
-document.querySelectorAll(".revelar").forEach(seccion => {
-  observador.observe(seccion);
-});
+  document.querySelectorAll(".revelar").forEach(seccion => {
+    observador.observe(seccion);
+  });
+} else {
+  document.querySelectorAll(".revelar").forEach(seccion => {
+    seccion.classList.add("visible");
+  });
+}
 
 // Año automático
-document.getElementById("anio").textContent = new Date().getFullYear();
+document.getElementById("anio").textContent =
+  new Date().getFullYear();
 </script>
 
 </body>
