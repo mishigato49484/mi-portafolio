@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b32">
+  <title>Personal y social | Abril Sánchez Segundo</title>
+  <link rel="stylesheet" href="estilos-portafolio.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">AS | Portafolio profesional</div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">☰ Menú</button>
+    <div class="menu" id="menu">
+      <a href="index.html">Sobre mí</a>
+      <a href="personal-social.html" class="activo">Personal y social</a>
+      <a href="aprendizajes-proyectos.html" >Aprendizajes y proyectos</a>
+      <a href="profesional-vocacional.html" >Profesional y vocacional</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-contenido">
+    <div class="etiqueta">01 · Dimensión personal y social</div>
+    <h1>Crecimiento personal y bienestar</h1>
+    <p>En este apartado se presentan evidencias relacionadas con el manejo de las emociones, la salud y la construcción de hábitos positivos.</p>
+  </div>
+</section>
+<main>
+
+<section class="seccion">
+  <div class="subtitulo">01 · Desarrollo personal</div>
+  <h2>Bienestar, emociones y crecimiento</h2>
+  <p class="descripcion">Actividades que permiten reconocer la importancia del bienestar emocional y de mantener hábitos que favorezcan una vida saludable.</p>
+  <div class="recursos">
+
+<article class="recurso">
+  <img class="recurso-imagen" src="documentos/manejo_emcional.jpg" alt="Manejo emocional" loading="lazy">
+  <div class="recurso-contenido">
+    <span class="categoria">Actividad · Inteligencia emocional</span>
+    <h4>Manejo emocional</h4>
+    <p>Material relacionado con el reconocimiento, la comprensión y la regulación de las emociones. Presenta ideas para responder de manera consciente ante distintas situaciones.</p>
+    <div class="acciones">
+      <a class="boton" href="documentos/manejo_emcional.jpg" target="_blank" rel="noopener">Ver imagen ↗</a>
+    </div>
+  </div>
+</article>
+<article class="recurso">
+  <img class="recurso-imagen" src="documentos/salud_y_felicidad.jpg" alt="Salud y felicidad" loading="lazy">
+  <div class="recurso-contenido">
+    <span class="categoria">Actividad · Bienestar</span>
+    <h4>Salud y felicidad</h4>
+    <p>Recurso sobre la relación entre la salud, el bienestar físico y emocional y las acciones cotidianas que contribuyen a una vida equilibrada.</p>
+    <div class="acciones">
+      <a class="boton" href="documentos/salud_y_felicidad.jpg" target="_blank" rel="noopener">Ver imagen ↗</a>
+    </div>
+  </div>
+</article>
+  </div>
+  <div class="nota">Estas evidencias reúnen actividades orientadas al autoconocimiento, el cuidado personal y la convivencia positiva.</div>
+</section>
+
+</main>
+<footer>© <span id="anio"></span> Abril Sánchez Segundo · Portafolio profesional</footer>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const menu=document.getElementById("menu");
+menuBtn.addEventListener("click",()=>{
+  const abierto=menu.classList.toggle("abierto");
+  menuBtn.setAttribute("aria-expanded",String(abierto));
+  menuBtn.textContent=abierto?"✕ Cerrar":"☰ Menú";
+});
+document.querySelectorAll(".menu a").forEach(enlace=>{
+  enlace.addEventListener("click",()=>{
+    menu.classList.remove("abierto");
+    menuBtn.setAttribute("aria-expanded","false");
+    menuBtn.textContent="☰ Menú";
+  });
+});
+document.getElementById("anio").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>

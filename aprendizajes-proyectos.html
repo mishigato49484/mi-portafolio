@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b32">
+  <title>Aprendizajes y proyectos | Abril Sánchez Segundo</title>
+  <link rel="stylesheet" href="estilos-portafolio.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">AS | Portafolio profesional</div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">☰ Menú</button>
+    <div class="menu" id="menu">
+      <a href="index.html">Sobre mí</a>
+      <a href="personal-social.html" >Personal y social</a>
+      <a href="aprendizajes-proyectos.html" class="activo">Aprendizajes y proyectos</a>
+      <a href="profesional-vocacional.html" >Profesional y vocacional</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-contenido">
+    <div class="etiqueta">02 · Formación y aprendizaje</div>
+    <h1>Aprender, investigar y resolver</h1>
+    <p>Este espacio reúne actividades académicas que muestran estrategias para aprender, analizar problemas y fortalecer la curiosidad científica.</p>
+  </div>
+</section>
+<main>
+
+<section class="seccion">
+  <div class="subtitulo">02 · Estrategias de aprendizaje</div>
+  <h2>Aprendizaje basado en problemas y TIC</h2>
+  <p class="descripcion">Evidencias sobre el análisis de situaciones reales, la búsqueda de soluciones y el uso de herramientas tecnológicas como apoyo para aprender.</p>
+  <div class="recursos">
+
+<article class="recurso">
+  <img class="recurso-imagen" src="documentos/aprendizaje_basado.jpg" alt="Aprendizaje basado en problemas" loading="lazy">
+  <div class="recurso-contenido">
+    <span class="categoria">Evidencia · Metodología</span>
+    <h4>Aprendizaje basado en problemas</h4>
+    <p>Material que aborda el aprendizaje a partir de problemas o situaciones contextualizadas, promoviendo la investigación, el análisis, la colaboración y la propuesta de soluciones.</p>
+    <div class="acciones">
+      <a class="boton" href="documentos/aprendizaje_basado.jpg" target="_blank" rel="noopener">Ver imagen ↗</a>
+    </div>
+  </div>
+</article>
+<article class="recurso">
+  <img class="recurso-imagen" src="documentos/arbol_de_problemas.jpg" alt="Árbol de problemas" loading="lazy">
+  <div class="recurso-contenido">
+    <span class="categoria">Evidencia · Análisis</span>
+    <h4>Árbol de problemas</h4>
+    <p>Recurso visual para identificar un problema central, reconocer sus causas y consecuencias y organizar la información antes de plantear alternativas de solución.</p>
+    <div class="acciones">
+      <a class="boton" href="documentos/arbol_de_problemas.jpg" target="_blank" rel="noopener">Ver imagen ↗</a>
+    </div>
+  </div>
+</article>
+  </div>
+</section>
+<section class="seccion">
+  <div class="subtitulo">03 · Interés por la ciencia</div>
+  <h2>Vocación científica</h2>
+  <p class="descripcion">Material que refleja la curiosidad, la investigación y el interés por comprender fenómenos y generar conocimiento.</p>
+  <div class="recursos">
+
+<article class="recurso">
+  <img class="recurso-imagen" src="documentos/vocacion_cientifica1.jpg" alt="Vocación científica · Parte 1" loading="lazy">
+  <div class="recurso-contenido">
+    <span class="categoria">Evidencia · Ciencia e investigación</span>
+    <h4>Vocación científica · Parte 1</h4>
+    <p>Primera evidencia relacionada con el pensamiento científico, la observación, la formulación de preguntas y el interés por investigar.</p>
+    <div class="acciones">
+      <a class="boton" href="documentos/vocacion_cientifica1.jpg" target="_blank" rel="noopener">Ver imagen ↗</a>
+    </div>
+  </div>
+</article>
+<article class="recurso">
+  <img class="recurso-imagen" src="documentos/vocacion_cientifica2.jpg" alt="Vocación científica · Parte 2" loading="lazy">
+  <div class="recurso-contenido">
+    <span class="categoria">Evidencia · Ciencia e investigación</span>
+    <h4>Vocación científica · Parte 2</h4>
+    <p>Continuación del tema, con énfasis en la exploración de ideas, el desarrollo de habilidades de investigación y la aplicación del conocimiento.</p>
+    <div class="acciones">
+      <a class="boton" href="documentos/vocacion_cientifica2.jpg" target="_blank" rel="noopener">Ver imagen ↗</a>
+    </div>
+  </div>
+</article>
+  </div>
+  <div class="nota">Las imágenes se muestran como evidencias visuales. Puedes abrir cada una para consultarla en su tamaño original.</div>
+</section>
+
+</main>
+<footer>© <span id="anio"></span> Abril Sánchez Segundo · Portafolio profesional</footer>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const menu=document.getElementById("menu");
+menuBtn.addEventListener("click",()=>{
+  const abierto=menu.classList.toggle("abierto");
+  menuBtn.setAttribute("aria-expanded",String(abierto));
+  menuBtn.textContent=abierto?"✕ Cerrar":"☰ Menú";
+});
+document.querySelectorAll(".menu a").forEach(enlace=>{
+  enlace.addEventListener("click",()=>{
+    menu.classList.remove("abierto");
+    menuBtn.setAttribute("aria-expanded","false");
+    menuBtn.textContent="☰ Menú";
+  });
+});
+document.getElementById("anio").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>

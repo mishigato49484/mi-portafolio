@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101b32">
+  <title>Profesional y vocacional | Abril Sánchez Segundo</title>
+  <link rel="stylesheet" href="estilos-portafolio.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">AS | Portafolio profesional</div>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">☰ Menú</button>
+    <div class="menu" id="menu">
+      <a href="index.html">Sobre mí</a>
+      <a href="personal-social.html" >Personal y social</a>
+      <a href="aprendizajes-proyectos.html" >Aprendizajes y proyectos</a>
+      <a href="profesional-vocacional.html" class="activo">Profesional y vocacional</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-contenido">
+    <div class="etiqueta">03 · Identidad profesional y vocación</div>
+    <h1>Mi desarrollo profesional y vocacional</h1>
+    <p>En esta sección se presentan documentos que fortalecen la comprensión del mundo laboral y de los principios que orientan una práctica profesional responsable.</p>
+  </div>
+</section>
+<main>
+
+<section class="seccion">
+  <div class="subtitulo">04 · Entorno profesional</div>
+  <h2>Relaciones industriales y ética profesional</h2>
+  <p class="descripcion">Documentos que complementan mi formación y permiten reflexionar sobre el entorno laboral, las relaciones entre las personas y la responsabilidad en el ejercicio profesional.</p>
+  <div class="recursos">
+
+<article class="recurso">
+  <div class="recurso-contenido">
+    <div style="font-size:38px;margin-bottom:8px" aria-hidden="true">📄</div>
+    <span class="categoria">Formación profesional · Documento PDF</span>
+    <h4>Relaciones industriales</h4>
+    <p>Documento relacionado con las relaciones industriales y el entorno organizacional. Su consulta permite revisar aspectos de la interacción laboral y de la colaboración dentro de las organizaciones.</p>
+    <div class="acciones">
+      <a class="boton" href="documentos/relaciones_industriales.pdf" target="_blank" rel="noopener">Abrir documento ↗</a>
+      <a class="boton boton-secundario" href="documentos/relaciones_industriales.pdf" download>Descargar PDF ↓</a>
+    </div>
+  </div>
+</article>
+<article class="recurso">
+  <div class="recurso-contenido">
+    <div style="font-size:38px;margin-bottom:8px" aria-hidden="true">📄</div>
+    <span class="categoria">Formación ética · Documento PDF</span>
+    <h4>Ética profesional</h4>
+    <p>Documento enfocado en los principios y valores que orientan la conducta en el ámbito profesional, como la responsabilidad, la honestidad y el compromiso.</p>
+    <div class="acciones">
+      <a class="boton" href="documentos/Etica_profesional.pdf" target="_blank" rel="noopener">Abrir documento ↗</a>
+      <a class="boton boton-secundario" href="documentos/Etica_profesional.pdf" download>Descargar PDF ↓</a>
+    </div>
+  </div>
+</article>
+  </div>
+  <div class="nota">Los botones permiten abrir los PDF en el navegador o descargarlos para su consulta.</div>
+</section>
+
+</main>
+<footer>© <span id="anio"></span> Abril Sánchez Segundo · Portafolio profesional</footer>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const menu=document.getElementById("menu");
+menuBtn.addEventListener("click",()=>{
+  const abierto=menu.classList.toggle("abierto");
+  menuBtn.setAttribute("aria-expanded",String(abierto));
+  menuBtn.textContent=abierto?"✕ Cerrar":"☰ Menú";
+});
+document.querySelectorAll(".menu a").forEach(enlace=>{
+  enlace.addEventListener("click",()=>{
+    menu.classList.remove("abierto");
+    menuBtn.setAttribute("aria-expanded","false");
+    menuBtn.textContent="☰ Menú";
+  });
+});
+document.getElementById("anio").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
